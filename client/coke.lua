@@ -335,7 +335,7 @@ RegisterNetEvent('ps-drugprocessing:pickCocaLeaves', function()
 				spawnedCocaLeaf = spawnedCocaLeaf - 1
 
 				TriggerServerEvent('ps-drugprocessing:pickedUpCocaLeaf')
-				TriggerEvent('wais:addmissionxp:harvestcocaleaf', 1) -- added by pamela for wais battlepass
+				TriggerEvent('wais:addmissionxp:harvestcocaleaf', 1) -- added by pamela for wais battlepass.
 				isPickingUp = false
 			end, function()
 				ClearPedTasks(playerPed)
