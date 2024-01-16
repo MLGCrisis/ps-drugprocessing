@@ -14,6 +14,7 @@ local function ProcessChemicals()
 		disableCombat = true,
 	}, {}, {}, {}, function()
 		TriggerServerEvent('ps-drugprocessing:processChemicals')
+		TriggerEvent('wais:addmissionxp:processchem', 1) -- added by pamela for wais battlepass
 
 		local timeLeft = Config.Delays.MethProcessing / 1000
 		while timeLeft > 0 do
@@ -107,6 +108,7 @@ local function ProcessProduct()
 		disableCombat = true,
 	}, {}, {}, {}, function()
 		TriggerServerEvent('ps-drugprocessing:processMeth')
+		TriggerEvent('wais:addmissionxp:processmeth', 1) -- added by pamela for wais battlepass
 
 		local timeLeft = Config.Delays.MethProcessing / 1000
 		while timeLeft > 0 do

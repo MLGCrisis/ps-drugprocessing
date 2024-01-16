@@ -14,6 +14,7 @@ local function Processlsd()
 		disableKeyboard = true,
 	}, {}, {}, {}, function()
 		TriggerServerEvent('ps-drugprocessing:Processlsd')
+		TriggerEvent('wais:addmissionxp:processlsd', 1) -- added by pamela for wais battlepass
 
 		local timeLeft = Config.Delays.lsdProcessing / 1000
 		while timeLeft > 0 do
@@ -46,6 +47,7 @@ local function Processthionylchloride()
 		disableKeyboard = true,
 	}, {}, {}, {}, function()
 		TriggerServerEvent('ps-drugprocessing:processThionylChloride')
+		TriggerEvent('wais:addmissionxp:processtc', 1) -- added by pamela for wais battlepass
 		local timeLeft = Config.Delays.thionylchlorideProcessing / 1000
 		while timeLeft > 0 do
 			Wait(1000)

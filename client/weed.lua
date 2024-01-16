@@ -131,6 +131,7 @@ local function RollJoint()
 		disableCombat = true,
 	}, {}, {}, {}, function()
 		TriggerServerEvent('ps-drugprocessing:rollJoint')
+		TriggerEvent('wais:addmissionxp:rolljoint', 1) --added by pamela for wais battlepass
 		local timeLeft = Config.Delays.WeedProcessing / 1000
 		while timeLeft > 0 do
 			Wait(1000)
@@ -156,6 +157,7 @@ local function BagSkunk()
 		disableCombat = true,
 	}, {}, {}, {}, function()
 		TriggerServerEvent('ps-drugprocessing:bagskunk')
+		TriggerEvent('wais:addmissionxp:bagskunk', 1) -- added by pamela for wais battlepass
 		local timeLeft = Config.Delays.WeedProcessing / 1000
 		while timeLeft > 0 do
 			Wait(1000)
@@ -181,6 +183,7 @@ local function ProcessWeed()
 		disableCombat = true,
 	}, {}, {}, {}, function()
 		TriggerServerEvent('ps-drugprocessing:processCannabis')
+		TriggerEvent('wais:addmissionxp:processcannabis', 1) -- added by pamela for wais battlepass
 		local timeLeft = Config.Delays.WeedProcessing / 1000
 		while timeLeft > 0 do
 			Wait(1000)

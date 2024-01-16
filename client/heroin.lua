@@ -88,6 +88,7 @@ local function ProcessHeroin()
 		disableCombat = true,
 	}, {}, {}, {}, function()
 		TriggerServerEvent('ps-drugprocessing:processPoppyResin')
+		TriggerEvent('wais:addmissionxp:processpr', 1) -- added by pamela for wais battlepass
 
 		local timeLeft = Config.Delays.HeroinProcessing / 1000
 		while timeLeft > 0 do
@@ -162,6 +163,7 @@ RegisterNetEvent("ps-drugprocessing:pickHeroin", function()
 			spawnedPoppys -= 1
 
 			TriggerServerEvent('ps-drugprocessing:pickedUpPoppy')
+			TriggerEvent('wais:addmissionxp:harvestpop', 1) -- added by pamela for wais battlepass
 			isPickingUp = false
 
 		end, function()
