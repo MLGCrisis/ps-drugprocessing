@@ -136,6 +136,7 @@ local function process_hydrochloric_acid()
 		disableCombat = true,
 	}, {}, {}, {}, function()
 		TriggerServerEvent('ps-drugprocessing:processHydrochloric_acid')
+		TriggerEvent('wais:addmissionxp:processha', 1) --added by Pamela for wais battlepass
 
 		local timeLeft = Config.Delays.thionylchlorideProcessing / 1000
 		while timeLeft > 0 do
@@ -166,6 +167,7 @@ local function process_lsa()
 		disableCombat = true,
 	}, {}, {}, {}, function()
 		TriggerServerEvent('ps-drugprocessing:process_lsa')
+		TriggerEvent('wais:addmissionxp:processlsa', 1) -- added by Pamela for wais battlepass
 
 		local timeLeft = Config.Delays.thionylchlorideProcessing / 1000
 		while timeLeft > 0 do
@@ -196,6 +198,7 @@ local function process_sulfuric_acid()
 		disableCombat = true,
 	}, {}, {}, {}, function()
 		TriggerServerEvent('ps-drugprocessing:processprocess_sulfuric_acid')
+		TriggerEvent('wais:addmissionxp:processsulfa', 1) -- added by Pamela for wais battlepass
 
 		local timeLeft = Config.Delays.thionylchlorideProcessing / 1000
 		while timeLeft > 0 do
@@ -226,6 +229,7 @@ local function process_sodium_hydroxide()
 		disableCombat = true,
 	}, {}, {}, {}, function()
 		TriggerServerEvent('ps-drugprocessing:processsodium_hydroxide')
+		TriggerEvent('wais:addmissionxp:processph', 1) -- added by Pamela for wais battlepass
 
 		local timeLeft = Config.Delays.thionylchlorideProcessing / 1000
 		while timeLeft > 0 do
